@@ -58,7 +58,7 @@ namespace SeleniumCsharp
 
             driver.Navigate().GoToUrl("https://www.amazon.com/");
 
-            Assert.IsTrue(driver.FindElement(By.Id("nav-logo")).Displayed);
+            Assert.IsTrue(driver.FindElement(By.Id("nav-logo-sprites")).Displayed);
 
         }
 
@@ -68,23 +68,23 @@ namespace SeleniumCsharp
 
         {
 
-            ReadOnlyCollection<IWebElement> menuItem = driver.FindElements(By.XPath("//ul[contains(@class,'horizontal-list product-menu')]/li"));
+            ReadOnlyCollection<IWebElement> menuItem = driver.FindElements(By.XPath("//ul[contains(@class,'hide-sm hide-xs bstack-mm-container')]/li"));
 
-            Assert.AreEqual(menuItem.Count, 4);
+            Assert.AreEqual(menuItem.Count, 6);
 
         }
 
         [Test]
 
-        public void verifyPricingPage()
+        public void verifySellPage()
 
         {
 
-            driver.Navigate().GoToUrl("https://browserstack.com/pricing");
+            driver.Navigate().GoToUrl("https://www.amazon.com/sell/");
 
-            IWebElement contactUsPageHeader = driver.FindElement(By.TagName("h1"));
+            IWebElement contactUsPageHeader = driver.FindElement(By.XPath(".//div[contains(@id,'')]/h1"));
 
-            Assert.IsTrue(contactUsPageHeader.Text.Contains("Replace your device lab and VMs with any of these plans"));
+            Assert.IsTrue(contactUsPageHeader.Text.Contains("Sell with Amazon"));
 
         }
 

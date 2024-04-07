@@ -29,24 +29,7 @@ namespace SeleniumCsharp
         public void Setup()
 
         {
-
-            //Below code is to get the drivers folder path dynamically.
-
-            string path = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-
-        //Creates the ChomeDriver object, Executes tests on Google Chrome
-
-        //driver = new ChromeDriver(path + @"\drivers\");
-        
-
-           driver = new ChromeDriver(@"C:\TARepo\elmavp1982\TestProjectElmaVP\TestProjectElmaVP\drivers");
-
-
-            //If you want to Execute Tests on Firefox uncomment the below code
-
-            // Specify Correct location of geckodriver.exe folder path. Ex: C:/Project/drivers
-
-            //driver= new FirefoxDriver(path + @"\drivers\");
+            driver = new ChromeDriver();
 
         }
 

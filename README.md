@@ -8,11 +8,10 @@ Prerequisites:
   
 Tool used:
 - have Visual Studio installed
-- installed: Microsoft.Net.Test.Sdk, nUnit, nUnit3.TestAdapter, SeleniumSupport, SeleniumWebDriver
+- installed: Microsoft.Net.Test.Sdk, nUnit, nUnit3.TestAdapter, SeleniumSupport, SeleniumWebDriver, DotNetSeleniumExtras.WaitHelpers
 
 How this project was setup:
-- have C:\TARepo\elmavp1982 folder created localy on your C: disk
-- go to github link: https://github.com/elmavp1982/TestProjectElmaVP and clone repository on location from previous step
+- go to github link: https://github.com/elmavp1982/TestProjectElmaVP and clone repository localy on your windows machine (i.e. somwhere on C: drive)
 
 Running tests:
   All the tests are present in SeleniumTest.cs. Run tests in a way to go in VisualStudio on Test->Test Explorer and 
